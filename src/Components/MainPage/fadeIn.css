@@ -1,0 +1,56 @@
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .fade-in-text {
+    animation: fadeIn 2s ease-in; /* Adjust the duration as needed */
+  }
+
+@keyframes revealFromCenter {
+  0% {
+      clip-path: polygon(00% 50%, 30% 50%, 20% 50%, 0% 50%);
+  }
+  100% {
+      clip-path: polygon(0% 0%, 500% 0%, 100% 100%, 0% 100%);
+  }
+}
+
+.image-reveal-animation, .text-reveal-animation {
+  animation: revealFromCenter 2s forwards;
+  opacity: 1;
+  line-height: 1.5;
+  padding: 10px;
+}
+
+@keyframes gradientBackgroundChange {
+  0%   { background: linear-gradient(black, #303030); }
+  25%  { background: linear-gradient(45deg, #303030, #121212); }  
+  50%  { background: linear-gradient(45deg, black, #121212); }  
+  75%  { background: linear-gradient(45deg, #303030, #121212); }  
+  100% { background: linear-gradient(black, #303030); }
+}
+
+.animate-gradient-background {
+  animation: fadeIn 3s ease-in; /* Adjust the duration as needed */
+  animation: gradientBackgroundChange 10s forwards;
+}
+
+.hide-element {
+  animation: hideElement 1s forwards;
+}
+
+.hide-text {
+  animation: hideElement 0s forwards;
+}
+
+@keyframes hideElement {
+  to {
+      opacity: 0;
+      visibility: hidden;
+  }
+}
